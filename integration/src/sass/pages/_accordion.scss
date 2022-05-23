@@ -1,0 +1,84 @@
+.accordion {
+    margin-top: 0;
+    margin-bottom: 155px;
+    padding: 0 20px;
+    @include breakpoint-large {
+        margin-top: 50px;
+        padding: 0;
+    }
+    &__lodging {
+        margin-top: 0;
+        margin-bottom: 155px;
+        padding: 0 20px;
+        @include breakpoint-large {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding: 0;
+        }
+    }
+    &__item {
+        background: $primary-color;
+        border-radius: 5px;
+        color: white;
+        display: flex;
+        font-size: 12px;
+        font-weight: 500;
+        justify-content: space-between;
+        padding: 15px 20px;
+        width: auto;
+        margin: 0 auto;
+        margin-top: 30px;
+        @include breakpoint-large {
+            font-size: 24px;
+            margin: 0 auto;
+            width: 1023px;
+        }
+    }
+    &__lodging-item {
+        background: $primary-color;
+        border-radius: 5px;
+        color: white;
+        display: flex;
+        font-size: 12px;
+        font-weight: 500;
+        justify-content: space-between;
+        padding: 15px 20px;
+        width: auto;
+        margin: 0 auto;
+        margin-top: 30px;
+        @include breakpoint-large {
+            font-size: 24px;
+            margin: 0;
+            width: 560px;
+        }
+    }
+    &__item-content {
+        background: #F6F6F6;
+        color: $primary-color;
+        font-size: 12px;
+        font-weight: 400;
+        padding: 23px 12px 52px 12px;
+        width: auto;
+        margin: 0 auto;
+        @include breakpoint-large {
+            font-size: 18px;
+            padding: 36px 18px;
+            width: 1023px;
+        }
+    }
+    &__lodging-item-content {
+        background: #F6F6F6;
+        color: $primary-color;
+        font-size: 12px;
+        font-weight: 400;
+        padding: 23px 12px 52px 12px;
+        width: auto;
+        margin: 0 auto;
+        @include breakpoint-large {
+            font-size: 18px;
+            padding: 36px 18px;
+            width: 560px;
+        }
+    }
+}

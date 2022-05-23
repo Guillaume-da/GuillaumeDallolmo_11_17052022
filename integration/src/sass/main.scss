@@ -1,0 +1,15 @@
+@import 'base/reset';
+
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'base/global';
+@import 'base/typography';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'pages/homeCard';
+@import 'pages/homeHero';
+@import 'pages/aboutHero';
+@import 'pages/accordion';
+@import 'pages/error-page';
+@import 'pages/lodgingHero';

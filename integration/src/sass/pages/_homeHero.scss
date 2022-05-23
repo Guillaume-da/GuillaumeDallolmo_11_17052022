@@ -1,0 +1,33 @@
+.homeHero {
+    padding: 0 20px;
+    margin-bottom: 22px;
+    &__banner {
+        background-image: url("../../src/img/hero-background.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        height: 111px;
+        @include breakpoint-large {
+            border-radius: 25px;
+            width: 1240px;
+            height: 223px;
+            margin-top: 36px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__title {
+        color: white;
+        @include breakpoint-large {
+            font-size: 48px;
+            font-weight: 500;
+            letter-spacing: 2.75px;
+        }
+    }
+    
+}

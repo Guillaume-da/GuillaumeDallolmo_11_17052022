@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "sass": "sass --watch ./src/sass/main.scss:./src/css/style.css",
-    "prefix": "postcss ./src/css/style.css --use autoprefixer -d ./src/css/prefixed/"
+    "prefix": "postcss ./src/css/style.css --use autoprefixer -d ./src/css/prefixed/",
+    "lint": "eslint ./"
   },
   "author": "",
   "license": "ISC",

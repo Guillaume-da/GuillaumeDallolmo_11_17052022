@@ -1,0 +1,90 @@
+.lodgingHero {
+    color: $primary-color;
+    // padding: 0 20px;
+    i {
+        color: #E3E3E3;
+    }
+    &__title-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 109px;
+        @include breakpoint-large {
+            height: 79px;
+        }
+    }
+    &__title {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 142%;
+        margin-left: 5%;
+        margin-right: 5%;
+        @include breakpoint-large {
+            margin: 0;
+        }
+    }
+    &__location {
+        display: block;
+        font-size: 14px;
+        margin-left: 5%;
+        margin-right: 5%;
+        @include breakpoint-large {
+            font-size: 18px;
+            margin: 0;
+        }
+    }
+    &__image {
+        border-radius: 10px;
+        width: 90%;
+        height: 255px;
+        object-fit: cover;
+        margin-left: 5%;
+        margin-right: 5%;
+        @include breakpoint-large {
+            width: 100%;
+            margin: 0;
+        }
+    }
+    &__container {
+        @include breakpoint-large {
+           display: flex;
+           justify-content: space-between;
+           margin-top: 15px;
+        }
+    }
+    &__filter-container {
+        margin-left: 5%;
+        margin-right: 5%;
+        @include breakpoint-large {
+            margin: 15px 0 0 0;
+        }
+    }
+    &__filter {
+        background: $primary-color;
+        border-radius: 10px;
+        color: white;
+        font-size: 10px;
+        padding: 5px 30px;
+        margin: 10px 10px 10px 0;
+        width: 34px;
+    }
+    &__user-container {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 5%;
+        margin-right: 5%;
+        @include breakpoint-large {
+            height: 69px;
+            margin: 0;
+            flex-direction: column-reverse;
+        }
+    }
+    &__username-container {
+        font-size: 12px;
+        display: flex;
+        justify-content: space-between;
+        width: 105px;
+    }
+}
