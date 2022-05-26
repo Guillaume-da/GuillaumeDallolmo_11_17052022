@@ -1,0 +1,25 @@
+@import '../../styles/index.scss';
+
+.homeCard {
+    background: linear-gradient(#ff6464, #893737);
+    border-radius: 10px;
+    height: 255px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+    @include breakpoint-large {
+        height: 340px;
+        width: 340px;
+    }
+    &__title {
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: 500;
+        position: absolute;
+        bottom: 15px;
+        left: 21px;
+        @include breakpoint-large {
+            bottom: 20px;
+        }
+    }
+}

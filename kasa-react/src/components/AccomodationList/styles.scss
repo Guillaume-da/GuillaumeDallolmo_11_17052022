@@ -1,0 +1,16 @@
+@import '../../styles/index.scss';
+
+.main {
+    padding: 0 20px;
+    @include breakpoint-large {
+        background: #F6F6F6;
+        border-radius: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 60px;
+        margin-bottom: 43px;
+        margin-top: 43px;
+        padding: 56px 50px;
+        row-gap: 50px;
+    }
+}
