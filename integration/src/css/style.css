@@ -51,11 +51,6 @@ body {
   margin: 0 auto;
   width: auto;
 }
-@media (min-width: 1020px) {
-  body {
-    width: 1440px;
-  }
-}
 
 main {
   margin: 0 auto;
@@ -99,7 +94,9 @@ main {
 }
 @media (min-width: 1020px) {
   .header {
-    padding: 40px 100px;
+    padding: 40px 0;
+    margin: 0 auto;
+    width: 1240px;
   }
 }
 .header__logo {
@@ -327,9 +324,11 @@ main {
 }
 @media (min-width: 1020px) {
   .accordion__item-content {
+    margin-bottom: 30px;
     font-size: 18px;
     padding: 36px 18px;
     width: 1023px;
+    margin-top: -31px;
   }
 }
 .accordion__lodging-item-content {
@@ -436,7 +435,7 @@ main {
 .lodgingHero__image {
   border-radius: 10px;
   width: 90%;
-  height: 255px;
+  height: 415px;
   object-fit: cover;
   margin-left: 5%;
   margin-right: 5%;
@@ -492,6 +491,24 @@ main {
   display: flex;
   justify-content: space-between;
   width: 105px;
+}
+.lodgingHero__slider-container {
+  position: relative;
+  font-size: 76px;
+}
+.lodgingHero__slider-left-item {
+  color: white !important;
+  left: 25px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.lodgingHero__slider-right-item {
+  color: white !important;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -2,14 +2,14 @@ import logo from '../../assets/logo.svg'
 import { Link } from 'react-router-dom';
 import './styles.scss';
 
-function Header() {
+const Header = () => {
   return (
     <header className="header">
-        <img src={ logo } alt='' className='header__logo' />
+        <Link to='/'><img src={ logo } alt='' className='header__logo' /></Link>
         <nav className="header__menu">
             <ul className="header__menu-list">
                 <Link to='/' className="header__menu-link"><li className="header__menu-item active">Accueil</li></Link>
-                <a href="http://localhost/kasa/integration/src/pages/a-propos.html" className="header__menu-link"><li className="header__menu-item">A propos</li></a>
+                <Link to='/about' className="header__menu-link"><li className="header__menu-item">A propos</li></Link>
             </ul>
         </nav>
     </header>

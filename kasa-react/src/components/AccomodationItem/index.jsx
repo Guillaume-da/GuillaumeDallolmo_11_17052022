@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import './styles.scss';
 
-function AccommodationItem(props) {
-    const titleValue = props.titleValue
+const AccommodationItem = (props) => {
+    const {titleValue, id} = props
     return (
-        <Link to='/'>
+        <Link to={'accomodation/' + id}>
             <article className="homeCard">
                 <h2 className="homeCard__title">{titleValue}</h2>
             </article>

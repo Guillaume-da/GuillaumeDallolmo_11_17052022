@@ -1,11 +1,11 @@
-import HomeHero from '../components/HomeHero';
+import HeroBanner from '../components/HeroBanner';
 import AccommodationList from '../components/AccomodationList';
 
 function Home() {
 
     return (
         <div>
-            <HomeHero />
+            <HeroBanner />
             <AccommodationList />
         </div>
     );

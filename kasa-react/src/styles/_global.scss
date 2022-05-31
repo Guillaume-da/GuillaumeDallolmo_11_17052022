@@ -22,3 +22,11 @@ main {
 .red {
     color: $primary-color !important;
 }
+
+.visible {
+    display: block;
+}
+
+.visible-flex {
+    display: flex;
+}

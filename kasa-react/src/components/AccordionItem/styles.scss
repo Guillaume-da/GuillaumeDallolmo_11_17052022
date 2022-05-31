@@ -1,10 +1,12 @@
+@import '../../styles/index.scss';
+
 .accordion {
     margin-top: 0;
     margin-bottom: 155px;
     padding: 0 20px;
     @include breakpoint-large {
         margin-top: 50px;
-        padding: 0;
+        padding: 0 50px;
     }
     &__lodging {
         margin-top: 0;
@@ -33,7 +35,7 @@
             font-size: 24px;
             margin: 0 auto;
             margin-bottom: 30px;
-            width: 1023px;
+            width: 100%;
         }
     }
     &__lodging-item {
@@ -57,6 +59,7 @@
     &__item-content {
         background: #F6F6F6;
         color: $primary-color;
+        display: none;
         font-size: 12px;
         font-weight: 400;
         padding: 23px 12px 52px 12px;
@@ -66,13 +69,14 @@
             margin-bottom: 30px;
             font-size: 18px;
             padding: 36px 18px;
-            width: 1023px;
+            width: 100%;
             margin-top: -31px;
         }
     }
     &__lodging-item-content {
         background: #F6F6F6;
         color: $primary-color;
+        display: none;
         font-size: 12px;
         font-weight: 400;
         padding: 23px 12px 52px 12px;
@@ -82,6 +86,12 @@
             font-size: 18px;
             padding: 36px 18px;
             width: 560px;
+        }
+    }
+    &__lodging-accordion-container {
+        width: 100%;
+        @include breakpoint-large {
+            width: 582px;
         }
     }
 }

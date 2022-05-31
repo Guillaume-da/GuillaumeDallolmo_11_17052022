@@ -1,3 +1,5 @@
+@import '../../styles/index.scss';
+
 .lodgingHero {
     color: $primary-color;
     i {
@@ -19,6 +21,7 @@
         margin-left: 5%;
         margin-right: 5%;
         @include breakpoint-large {
+            font-size: 36px;
             margin: 0;
         }
     }
@@ -66,6 +69,9 @@
         padding: 5px 30px;
         margin: 10px 10px 10px 0;
         width: 34px;
+        @include breakpoint-large {
+            font-size: 14px;
+        }
     }
     &__user-container {
         margin-top: 20px;
@@ -75,7 +81,7 @@
         margin-left: 5%;
         margin-right: 5%;
         @include breakpoint-large {
-            height: 69px;
+            height: 100px;
             margin: 0;
             flex-direction: column-reverse;
         }
@@ -85,6 +91,21 @@
         display: flex;
         justify-content: space-between;
         width: 105px;
+        @include breakpoint-large {
+            align-items: center;
+            width: 140px;
+            font-size: 18px;
+        }
+    }
+    &__stars-container {
+        font-size: 12px;
+        @include breakpoint-large {
+            font-size: 24px;
+        }
+    }
+    &__username-image {
+        width: 64px;
+        border-radius: 50%;
     }
     &__slider-container {
         position: relative;

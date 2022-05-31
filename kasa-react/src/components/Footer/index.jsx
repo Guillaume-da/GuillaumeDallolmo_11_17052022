@@ -1,7 +1,7 @@
 import logo from '../../assets/footer-logo.svg'
 import './styles.scss';
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className="footer">
         <img src={ logo } alt='' className='footer__logo' />
