@@ -4,7 +4,7 @@ import Loader from '../Loader'
 import './styles.scss';
 
 function AccommodationList() {
-    const { loading, data: datas } = useFetch('https://sparkling-douhua-8ea0e2.netlify.app/accomodations.json')
+    const { loading, data: datas } = useFetch(`${process.env.REACT_APP_API}`)
     if(datas) console.log(datas)
     if (loading) return <Loader />
     return (

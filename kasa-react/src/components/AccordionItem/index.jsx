@@ -23,9 +23,9 @@ const AccordionItem = (props) => {
     }
 
     useEffect(() => {
-        if(refHeight.current !== undefined){
-            console.log('refHeight', refHeight);
-        }
+        // if(refHeight.current !== undefined){
+        //     console.log('refHeight', refHeight);
+        // }
         setHeightEl(`${refHeight.current.scrollHeight}px`)
     }, [])
     
