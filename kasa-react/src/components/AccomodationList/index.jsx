@@ -1,25 +1,17 @@
-import { React, useEffect, useState } from "react";
-import AccommodationItem from '../AccomodationItem';
+import useFetch from '../../useFetch'
+import AccommodationItem from '../AccomodationItem'
+import Loader from '../Loader'
 import './styles.scss';
 
 function AccommodationList() {
-    const [datas, setData] = useState([]);
-
-    useEffect(() => {
-        // GET request using fetch inside useEffect React hook
-        fetch('http://localhost:3000/accomodations.json')
-        .then(response => response.json())
-        .then(datas => setData(datas));
-    // empty dependency array means this effect will only run once (like componentDidMount in classes)
-    }, []);
-
-    console.log(datas)
-   
+    const { loading, data: datas } = useFetch('https://sparkling-douhua-8ea0e2.netlify.app/accomodations.json')
+    if(datas) console.log(datas)
+    if (loading) return <Loader />
     return (
         <main>
             <div className="main">
-                {datas.map((data) => (
-                    <AccommodationItem titleValue={data.title} id={data.id} key={`${data.id}`}  />
+                {datas?.map((item) => (
+                    <AccommodationItem titleValue={item.title} id={item.id} key={`${item.id}`}  />
                 ))}
             </div>
         </main>

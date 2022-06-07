@@ -63,13 +63,14 @@
     }
     &__filter {
         background: $primary-color;
-        border-radius: 10px;
+        border-radius: 5px;
         color: white;
         font-size: 10px;
         padding: 5px 30px;
         margin: 10px 10px 10px 0;
         width: 34px;
         @include breakpoint-large {
+            border-radius: 10px;
             font-size: 14px;
         }
     }
@@ -87,6 +88,7 @@
         }
     }
     &__username-container {
+        align-items: center;
         font-size: 12px;
         display: flex;
         justify-content: space-between;
@@ -112,5 +114,8 @@
         right: 25px;
         top: 50%;
         transform: translateY(-50%);
+    }
+    &__slider-left-item:hover, &__slider-right-item:hover {
+        cursor: pointer;
     }
 }

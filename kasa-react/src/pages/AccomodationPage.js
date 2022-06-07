@@ -1,24 +1,22 @@
-import { React, useEffect, useState } from "react";
+import { React } from "react";
+import Loader from '../components/Loader'
 import Location from '../components/Location';
 import Slider from '../components/Slider';
 import TagsList from '../components/TagsList';
+import Stars from '../components/Stars'
 import Host from '../components/Host';
 import { useLocation } from 'react-router-dom';
 import AccordionItem from "../components/AccordionItem";
+import useFetch from '../useFetch'
 
 function AccomodationPage() {
-    const [datas, setData] = useState([]);
-    useEffect(() => {
-        // GET request using fetch inside useEffect React hook
-        fetch('http://localhost:3000/accomodations.json')
-        .then(response => response.json())
-        .then(datas => setData(datas));
-    // empty dependency array means this effect will only run once (like componentDidMount in classes)
-    }, []);
+    const { loading, data: datas } = useFetch('https://sparkling-douhua-8ea0e2.netlify.app/accomodations.json')
 
     const slug = useLocation()
     const id = slug.pathname.replace('/accomodation/', '')
-    const accomodation = datas.find((item) => item.id === id);
+    const accomodation = datas?.find((item) => item.id === id);
+
+    if (loading) return <Loader />
 
     if(accomodation !== undefined){
         console.log(accomodation)
@@ -31,13 +29,7 @@ function AccomodationPage() {
                         <TagsList tags={accomodation.tags} />
                     </div>
                     <div className="lodgingHero__user-container">
-                        <div className="lodgingHero__stars-container">
-                            <i className="fas fa-star red"></i>
-                            <i className="fas fa-star red"></i>
-                            <i className="fas fa-star red"></i>
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star"></i>
-                        </div>
+                        <Stars rating={accomodation.rating} />
                         <Host nameValue={accomodation.host.name} imgValue={accomodation.host.picture} />
                     </div>
                 </div>

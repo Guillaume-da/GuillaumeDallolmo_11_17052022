@@ -21,7 +21,7 @@
     }
     &__item {
         background: $primary-color;
-        border-radius: 5px;
+        border-radius: 10px;
         color: white;
         display: flex;
         font-size: 12px;
@@ -38,9 +38,12 @@
             width: 100%;
         }
     }
+    &__item:hover, &__lodging-item:hover {
+        cursor: pointer;
+    }
     &__lodging-item {
         background: $primary-color;
-        border-radius: 5px;
+        border-radius: 10px;
         color: white;
         display: flex;
         font-size: 12px;
@@ -58,25 +61,27 @@
     }
     &__item-content {
         background: #F6F6F6;
+        border-radius: 10px;
         color: $primary-color;
-        display: none;
+        // display: none;
         font-size: 12px;
         font-weight: 400;
         padding: 23px 12px 52px 12px;
         width: auto;
         margin: 0 auto;
+        
         @include breakpoint-large {
             margin-bottom: 30px;
             font-size: 18px;
             padding: 36px 18px;
-            width: 100%;
+            // width: 100%;
             margin-top: -31px;
         }
     }
     &__lodging-item-content {
         background: #F6F6F6;
         color: $primary-color;
-        display: none;
+        // display: none;
         font-size: 12px;
         font-weight: 400;
         padding: 23px 12px 52px 12px;
@@ -85,7 +90,9 @@
         @include breakpoint-large {
             font-size: 18px;
             padding: 36px 18px;
-            width: 560px;
+            // width: 560px;
+            width: auto;
+            box-sizing: content-box;
         }
     }
     &__lodging-accordion-container {
