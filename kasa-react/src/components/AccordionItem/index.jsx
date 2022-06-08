@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
 import './styles.scss';
 
 const AccordionItem = (props) => {
@@ -11,7 +10,6 @@ const AccordionItem = (props) => {
     const [descriptionToggle, setDescriptionToggle] = useState(false)
     const [equipmentsToggle, setEquipmentsToggle] = useState(false)
     
-    const slug = useLocation()
     const [heightEl, setHeightEl] = useState();
     const refHeight = useRef()
 
@@ -23,40 +21,17 @@ const AccordionItem = (props) => {
     }
 
     useEffect(() => {
-        // if(refHeight.current !== undefined){
-        //     console.log('refHeight', refHeight);
-        // }
         setHeightEl(`${refHeight.current.scrollHeight}px`)
     }, [])
     
-    if(slug.pathname === '/about'){
+    if (idValue === "description") {
         return (
             <div>
                 <div 
                 className="accordion__item" 
                 onClick={descriptionClassToggle}
                 >
-                    <h2>{titleValue}</h2>
-                    <i className="fas fa-angle-down"></i>
-                </div>
-                
-                    <div 
-                    className={`accordion__item-content ${descriptionToggle ? "animated" : "unvisible-about"}`} 
-                    ref={refHeight}
-                    >
-                        <p>{contentValue}</p>
-                    </div>
-            </div>
-        );
-    } 
-    else if (idValue === "description") {
-        return (
-            <div>
-                <div 
-                className="accordion__item" 
-                onClick={descriptionClassToggle}
-                >
-                    <h2>Description</h2>
+                    <h2>{titleValue ? titleValue : 'Description'}</h2>
                     <i className="fas fa-angle-down"></i>
                 </div>
                 <div 
@@ -71,7 +46,7 @@ const AccordionItem = (props) => {
             </div>
         );
     } 
-    else if (idValue === "equipement") {
+    else if (idValue === "equipment") {
         return (
             <div>
                 <div 
@@ -88,7 +63,7 @@ const AccordionItem = (props) => {
                 >
                     <ul>
                         {equipmentsValue.map((equipment, index) => (
-                            <li key={`${equipment}-${index}`}>{ equipment }</li>
+                            <li key={`${equipment}-${index}`}>{equipment}</li>
                         ))}
                     </ul>
                 </div>

@@ -36,10 +36,10 @@ function AccomodationPage() {
                 </div>
 
                 <div className="accordion__lodging">
-                    <div className="accordion__lodging-accordion-container">
+                    <div className="accordion__lodging-accordion-container half-width">
                         <AccordionItem titleValue={''} contentValue={accomodation.description} idValue="description"/>
                     </div>
-                    <AccordionItem titleValue={''} equipmentsValue={accomodation.equipments} idValue="equipement"/>
+                    <AccordionItem titleValue={''} equipmentsValue={accomodation.equipments} idValue="equipment"/>
                 </div>
             </main>
         );

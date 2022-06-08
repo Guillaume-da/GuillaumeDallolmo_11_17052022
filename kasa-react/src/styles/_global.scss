@@ -3,9 +3,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0 auto;
     width: auto;
-    // @include breakpoint-large {
-    //     width: 1440px;
-    // }
 }
 
 main {
@@ -32,7 +29,6 @@ main {
     height: 0;
     overflow: hidden;
     opacity: 0;
-    // padding: 0;
     transition:  
     opacity 0.3s ease-out,
     height 0.3s 0.3s ease-in-out;
@@ -59,4 +55,11 @@ main {
 
 .visible-flex {
     display: flex;
+}
+
+.half-width {
+    width: 100%;
+    @include breakpoint-large {
+        width: 582px;
+    }
 }

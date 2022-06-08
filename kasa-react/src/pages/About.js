@@ -10,7 +10,7 @@ function About() {
             <main className="accordion">
                 {data.map((item, index) => (
                     <div key={`${index}-${index}`} >
-                        <AccordionItem titleValue={item.title} contentValue={item.content} key={`${item.id}`}/>
+                        <AccordionItem titleValue={item.title} contentValue={item.content} key={`${item.id}`} idValue="description"/>
                     </div>
                 ))}
             </main>

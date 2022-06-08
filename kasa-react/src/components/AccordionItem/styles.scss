@@ -1,6 +1,9 @@
 @import '../../styles/index.scss';
 
 .accordion {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
     margin-top: 0;
     margin-bottom: 155px;
     padding: 0 20px;
@@ -34,7 +37,7 @@
         @include breakpoint-large {
             font-size: 24px;
             margin: 0 auto;
-            margin-bottom: 30px;
+            // margin-bottom: 30px;
             width: 100%;
         }
     }
@@ -56,7 +59,7 @@
         @include breakpoint-large {
             font-size: 24px;
             margin: 0;
-            width: 560px;
+            width: 582px;
         }
     }
     &__item-content {
@@ -71,11 +74,11 @@
         margin: 0 auto;
         
         @include breakpoint-large {
-            margin-bottom: 30px;
+            // margin-bottom: 30px;
             font-size: 18px;
             padding: 36px 18px;
             // width: 100%;
-            margin-top: -31px;
+            // margin-top: -31px;
         }
     }
     &__lodging-item-content {
@@ -98,7 +101,7 @@
     &__lodging-accordion-container {
         width: 100%;
         @include breakpoint-large {
-            width: 582px;
+            width: 100%;
         }
     }
 }
