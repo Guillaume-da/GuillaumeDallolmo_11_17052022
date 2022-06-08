@@ -1,0 +1,27 @@
+@import '../../styles/index.scss';
+
+.lodgingHero {
+    color: $primary-color;
+    
+    &__title {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 142%;
+        margin-left: 5%;
+        margin-right: 5%;
+        @include breakpoint-large {
+            font-size: 36px;
+            margin: 0;
+        }
+    }
+    &__location {
+        display: block;
+        font-size: 14px;
+        margin-left: 5%;
+        margin-right: 5%;
+        @include breakpoint-large {
+            font-size: 18px;
+            margin: 0;
+        }
+    }
+}

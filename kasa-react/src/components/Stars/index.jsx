@@ -9,7 +9,7 @@ const Stars = (props) => {
             <i className={rating >= 2 ? "fas fa-star red" : "fas fa-star"}></i>
             <i className={rating >= 3 ? "fas fa-star red" : "fas fa-star"}></i>
             <i className={rating >= 4 ? "fas fa-star red" : "fas fa-star"}></i>
-            <i className={rating === 5 ? "fas fa-star red" : "fas fa-star"}></i>
+            <i className={rating > 4 ? "fas fa-star red" : "fas fa-star"}></i>
         </div>
     );
 }

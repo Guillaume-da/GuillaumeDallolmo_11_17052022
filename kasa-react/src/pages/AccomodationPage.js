@@ -11,11 +11,13 @@ import AccordionItem from "../components/AccordionItem";
 import useFetch from '../useFetch'
 
 function AccomodationPage() {
+    console.log(`${process.env.REACT_APP_API}`)
     const { loading, data: datas } = useFetch(`${process.env.REACT_APP_API}`)
+
     const slug = useLocation()
     const id = slug.pathname.replace('/accomodation/', '')
     const accomodation = datas?.find((item) => item.id === id);
-    
+    console.log(accomodation)
     if (loading) return <Loader />
 
     if(accomodation !== undefined){

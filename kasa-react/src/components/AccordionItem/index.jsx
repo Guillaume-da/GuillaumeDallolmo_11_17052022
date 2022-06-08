@@ -32,7 +32,7 @@ const AccordionItem = (props) => {
                 onClick={descriptionClassToggle}
                 >
                     <h2>{titleValue ? titleValue : 'Description'}</h2>
-                    <i className="fas fa-angle-down"></i>
+                    {descriptionToggle ? <i className="fas fa-angle-down"></i> : <i className="fas fa-angle-up"></i>}
                 </div>
                 <div 
                 className={descriptionToggle ? "accordion__lodging-accordion-container animated" : "accordion__lodging-accordion-container unvisible"}
@@ -54,7 +54,7 @@ const AccordionItem = (props) => {
                 onClick={equipmentsClassToggle}
                 >
                     <h2>Equipements</h2>
-                    <i className="fas fa-angle-down"></i>
+                    {equipmentsToggle ? <i className="fas fa-angle-down"></i> : <i className="fas fa-angle-up"></i>}
                 </div>
                 <div 
                 className={equipmentsToggle ? "accordion__lodging-item-content animated" : "accordion__lodging-item-content unvisible"}
