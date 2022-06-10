@@ -1,15 +1,16 @@
+import star from '../../assets/star.svg'
+import redStar from '../../assets/red-star.svg'
 import './styles.scss';
 
 const Stars = (props) => {
     const rating = props.rating
-    console.log('Rating:',rating)
     return (
         <div className="lodgingHero__stars-container">
-            <i className={rating >= 1 ? "fas fa-star red" : "fas fa-star"}></i>
-            <i className={rating >= 2 ? "fas fa-star red" : "fas fa-star"}></i>
-            <i className={rating >= 3 ? "fas fa-star red" : "fas fa-star"}></i>
-            <i className={rating >= 4 ? "fas fa-star red" : "fas fa-star"}></i>
-            <i className={rating > 4 ? "fas fa-star red" : "fas fa-star"}></i>
+            {rating >= 1 ? <img src={ redStar } alt='' className="lodgingHero__star-img" /> : <img src={ star } alt='' className="lodgingHero__star-img" />}
+            {rating >= 2 ? <img src={ redStar } alt='' className="lodgingHero__star-img" /> : <img src={ star } alt='' className="lodgingHero__star-img" />}
+            {rating >= 3 ? <img src={ redStar } alt='' className="lodgingHero__star-img" /> : <img src={ star } alt='' className="lodgingHero__star-img" />}
+            {rating >= 4 ? <img src={ redStar } alt='' className="lodgingHero__star-img" /> : <img src={ star } alt='' className="lodgingHero__star-img" />}
+            {rating > 4 ? <img src={ redStar } alt='' className="lodgingHero__star-img" /> : <img src={ star } alt='' className="lodgingHero__star-img" />}
         </div>
     );
 }

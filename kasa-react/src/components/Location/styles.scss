@@ -6,19 +6,21 @@
     &__title {
         font-size: 18px;
         font-weight: 500;
-        line-height: 142%;
-        margin-left: 5%;
-        margin-right: 5%;
+        line-height: 26px;
+        margin-left: 20px;
+        margin-right: 20px;
         @include breakpoint-large {
             font-size: 36px;
+            line-height: 51px;
             margin: 0;
         }
     }
     &__location {
         display: block;
         font-size: 14px;
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-weight: 500;
         @include breakpoint-large {
             font-size: 18px;
             margin: 0;

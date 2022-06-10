@@ -4,7 +4,6 @@ import './styles.scss';
 
 const Header = () => {
   const slug = useLocation()
-  console.log(slug.pathname)
   return (
     <header className="header">
         <Link to='/'><img src={ logo } alt='' className='header__logo' /></Link>

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import arrowLeft from '../../assets/arrow-left.svg'
+import arrowRight from '../../assets/arrow-right.svg'
 import './styles.scss';
 
 const Slider = (props) => {
@@ -22,9 +24,9 @@ const Slider = (props) => {
     
     return (
         <div className="lodgingHero__slider-container">
-            <i className="fas fa-angle-left lodgingHero__slider-left-item" onClick={down}></i>
+            <img src={arrowLeft} alt="" className="lodgingHero__slider-left-item" onClick={down} />
             <img src={images[index]} alt="" className="lodgingHero__image" />
-            <i className="fas fa-angle-right lodgingHero__slider-right-item" onClick={up}></i>
+            <img src={arrowRight} alt="" className="lodgingHero__slider-right-item" onClick={up} />
         </div>
     );
 }

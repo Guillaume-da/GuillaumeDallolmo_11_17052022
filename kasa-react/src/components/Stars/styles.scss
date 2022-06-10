@@ -1,1 +1,14 @@
 @import '../../styles/index.scss';
+
+.lodgingHero {
+    &__stars-container {
+        display: flex;
+        column-gap: 5px;
+    }
+    &__star-img {
+        width: 15px;
+        @include breakpoint-large {
+            width: 30px;
+        }
+    }
+}

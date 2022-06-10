@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
+import arrowDown from '../../assets/arrow-down.svg'
+import arrowUp from '../../assets/arrow-up.svg'
 import './styles.scss';
 
 const AccordionItem = (props) => {
@@ -32,7 +34,7 @@ const AccordionItem = (props) => {
                 onClick={descriptionClassToggle}
                 >
                     <h2>{titleValue ? titleValue : 'Description'}</h2>
-                    {descriptionToggle ? <i className="fas fa-angle-down"></i> : <i className="fas fa-angle-up"></i>}
+                    {descriptionToggle ? <img src={ arrowUp } alt='' className='' /> : <img src={ arrowDown } alt='' className='' />}
                 </div>
                 <div 
                 className={descriptionToggle ? "accordion__lodging-accordion-container animated" : "accordion__lodging-accordion-container unvisible"}
@@ -54,7 +56,7 @@ const AccordionItem = (props) => {
                 onClick={equipmentsClassToggle}
                 >
                     <h2>Equipements</h2>
-                    {equipmentsToggle ? <i className="fas fa-angle-down"></i> : <i className="fas fa-angle-up"></i>}
+                    {equipmentsToggle ? <img src={ arrowUp } alt='' className='' /> : <img src={ arrowDown } alt='' className='' />}
                 </div>
                 <div 
                 className={equipmentsToggle ? "accordion__lodging-item-content animated" : "accordion__lodging-item-content unvisible"}

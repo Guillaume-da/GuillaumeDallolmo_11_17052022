@@ -3,13 +3,14 @@
 .accordion {
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
+    row-gap: 20px;
     margin-top: 0;
     margin-bottom: 155px;
     padding: 0 20px;
     @include breakpoint-large {
         margin-top: 50px;
         padding: 0 50px;
+        row-gap: 30px;
     }
     &__lodging {
         margin-top: 0;
@@ -24,21 +25,25 @@
     }
     &__item {
         background: $primary-color;
-        border-radius: 10px;
+        border-radius: 5px;
         color: white;
         display: flex;
         font-size: 12px;
         font-weight: 500;
         justify-content: space-between;
-        padding: 15px 20px;
+        line-height: 19px;
+        padding: 6px 7px 6px 12px;
         width: auto;
         margin: 0 auto;
         z-index: 50;
         position: relative;
 
         @include breakpoint-large {
-            font-size: 24px;
+            border-radius: 10px;
+            font-size: 17px;
+            line-height: 26px;
             margin: 0 auto;
+            padding: 13px 13px 13px 20px;
             width: 100%;
         }
     }
@@ -47,19 +52,23 @@
     }
     &__lodging-item {
         background: $primary-color;
-        border-radius: 10px;
+        border-radius: 5px;
         color: white;
         display: flex;
         font-size: 12px;
         font-weight: 500;
         justify-content: space-between;
-        padding: 15px 20px;
+        line-height: 19px;
+        padding: 6px 7px 6px 12px;
         width: auto;
         margin: 0 auto;
-        margin-top: 30px;
+        margin-top: 20px;
         @include breakpoint-large {
-            font-size: 24px;
+            border-radius: 10px;
+            font-size: 17px;
+            line-height: 26px;
             margin: 0;
+            padding: 13px 13px 13px 20px;
             width: 582px;
         }
     }
@@ -69,7 +78,8 @@
         color: $primary-color;
         font-size: 12px;
         font-weight: 400;
-        padding: 23px 12px 52px 12px;
+        line-height: 17px;
+        padding: 23px 12px;
         width: auto;
         margin: 0 auto;
         margin-top: -10px;
@@ -85,7 +95,8 @@
         color: $primary-color;
         font-size: 12px;
         font-weight: 400;
-        padding: 23px 12px 52px 12px;
+        line-height: 17px;
+        padding: 23px 12px;
         width: auto;
         margin: 0 auto;
         @include breakpoint-large {

@@ -1,1 +1,27 @@
 @import '../../styles/index.scss';
+
+.lodgingHero {
+    
+    &__filter-container {
+        margin-left: 20px;
+        margin-right: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        @include breakpoint-large {
+            margin: 0;
+        }
+    }
+    &__filter {
+        background: $primary-color;
+        border-radius: 5px;
+        color: white;
+        font-size: 10px;
+        padding: 5px 23px;
+        line-height: 15px;
+        @include breakpoint-large {
+            border-radius: 10px;
+            font-size: 14px;
+        }
+    }
+}

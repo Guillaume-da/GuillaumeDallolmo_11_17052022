@@ -1,132 +1,45 @@
 @import '../../styles/index.scss';
 
 .lodgingHero {
-    color: $primary-color;
-    i {
-        color: #E3E3E3;
-    }
-    &__title-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 109px;
-        @include breakpoint-large {
-            height: 79px;
-        }
-    }
-    &__title {
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 142%;
-        margin-left: 5%;
-        margin-right: 5%;
-        @include breakpoint-large {
-            font-size: 36px;
-            margin: 0;
-        }
-    }
-    &__location {
-        display: block;
-        font-size: 14px;
-        margin-left: 5%;
-        margin-right: 5%;
-        @include breakpoint-large {
-            font-size: 18px;
-            margin: 0;
-        }
-    }
-    &__image {
-        border-radius: 10px;
-        width: 90%;
-        height: 415px;
-        object-fit: cover;
-        margin-left: 5%;
-        margin-right: 5%;
-        @include breakpoint-large {
-            width: 100%;
-            margin: 0;
-        }
-    }
     &__container {
+        margin-bottom: 16px;
         @include breakpoint-large {
            display: flex;
            justify-content: space-between;
-           margin-top: 15px;
-        }
-    }
-    &__filter-container {
-        margin-left: 5%;
-        margin-right: 5%;
-        display: flex;
-        width: 100%;
-        flex-wrap: wrap;
-        @include breakpoint-large {
-            margin: 15px 0 0 0;
-        }
-    }
-    &__filter {
-        background: $primary-color;
-        border-radius: 5px;
-        color: white;
-        font-size: 10px;
-        padding: 5px 30px;
-        margin: 10px 10px 10px 0;
-        width: auto;
-        @include breakpoint-large {
-            border-radius: 10px;
-            font-size: 14px;
+           align-items: center;
         }
     }
     &__user-container {
         margin-top: 20px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 20px;
+        margin-right: 20px;
         @include breakpoint-large {
-            height: 100px;
-            margin: 0;
+            height: 110px;
+            margin: 20px 0 0 0;
             flex-direction: column-reverse;
         }
     }
     &__username-container {
         font-size: 12px;
         display: flex;
-        justify-content: space-between;
-        width: 105px;
+        width: 89px;
+        text-align: right;
+        column-gap: 10px;
+        line-height: 17px;
         @include breakpoint-large {
             align-items: center;
-            width: 155px;
+            line-height: 26px;
+            width: 167px;
             font-size: 18px;
         }
     }
-    &__stars-container {
-        font-size: 12px;
-        @include breakpoint-large {
-            font-size: 24px;
-        }
-    }
     &__username-image {
-        width: 64px;
+        width: 32px;
         border-radius: 50%;
-    }
-    &__slider-container {
-        position: relative;
-        font-size: 76px;
-    }
-    &__slider-left-item {
-        color: white !important;
-        left: 25px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    &__slider-right-item {
-        color: white !important;
-        position: absolute;
-        right: 25px;
-        top: 50%;
-        transform: translateY(-50%);
+        @include breakpoint-large {
+            width: 64px;
+        }
     }
 }
