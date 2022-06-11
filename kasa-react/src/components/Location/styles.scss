@@ -9,6 +9,11 @@
         line-height: 26px;
         margin-left: 20px;
         margin-right: 20px;
+        @include breakpoint-small {
+            font-size: 28px;
+            line-height: 35px;
+            // margin: 0;
+        }
         @include breakpoint-large {
             font-size: 36px;
             line-height: 51px;

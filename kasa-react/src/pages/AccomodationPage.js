@@ -37,7 +37,10 @@ function AccomodationPage() {
                     <div className="accordion__lodging-accordion-container half-width">
                         <AccordionItem titleValue={''} contentValue={accomodation.description} idValue="description"/>
                     </div>
-                    <AccordionItem titleValue={''} equipmentsValue={accomodation.equipments} idValue="equipment"/>
+                    <div className="accordion__lodging-accordion-container half-width">
+                        <AccordionItem titleValue={''} equipmentsValue={accomodation.equipments} idValue="equipment"/>
+                    </div>
+                    
                 </div>
             </main>
         );

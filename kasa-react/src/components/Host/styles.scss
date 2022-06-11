@@ -12,9 +12,9 @@
     &__user-container {
         margin-top: 20px;
         display: flex;
-        justify-content: space-between;
         margin-left: 20px;
         margin-right: 20px;
+        justify-content: space-between;
         @include breakpoint-large {
             height: 110px;
             margin: 20px 0 0 0;
@@ -28,6 +28,9 @@
         text-align: right;
         column-gap: 10px;
         line-height: 17px;
+        @include breakpoint-small {
+            width: 120px;
+        }
         @include breakpoint-large {
             align-items: center;
             line-height: 26px;
@@ -38,6 +41,9 @@
     &__username-image {
         width: 32px;
         border-radius: 50%;
+        @include breakpoint-small {
+            width: 48px;
+        }
         @include breakpoint-large {
             width: 64px;
         }

@@ -16,6 +16,14 @@
         margin-top: 0;
         margin-bottom: 155px;
         padding: 0 20px;
+        @include breakpoint-small {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding: 0 20px;
+            align-items: baseline;
+            column-gap: 20px;
+        }
         @include breakpoint-large {
             display: flex;
             justify-content: space-between;
@@ -37,14 +45,17 @@
         margin: 0 auto;
         z-index: 50;
         position: relative;
-
+        @include breakpoint-small {
+            line-height: 22px;
+            width: auto;
+        }
         @include breakpoint-large {
             border-radius: 10px;
             font-size: 17px;
             line-height: 26px;
             margin: 0 auto;
             padding: 13px 13px 13px 20px;
-            width: 100%;
+            width: auto;
         }
     }
     &__item:hover, &__lodging-item:hover {
@@ -63,13 +74,17 @@
         width: auto;
         margin: 0 auto;
         margin-top: 20px;
+        @include breakpoint-small {
+            line-height: 22px;
+            width: auto;
+        }
         @include breakpoint-large {
             border-radius: 10px;
             font-size: 17px;
             line-height: 26px;
             margin: 0;
             padding: 13px 13px 13px 20px;
-            width: 582px;
+            width: auto;
         }
     }
     &__item-content {
@@ -84,6 +99,7 @@
         margin: 0 auto;
         margin-top: -10px;
         z-index: 25;
+        margin-bottom: 10px;
         
         @include breakpoint-large {
             font-size: 18px;

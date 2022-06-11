@@ -6,7 +6,7 @@ const Header = () => {
   const slug = useLocation()
   return (
     <header className="header">
-        <Link to='/'><img src={ logo } alt='' className='header__logo' /></Link>
+        <Link to='/'><img src={ logo } alt='logo kasa' className='header__logo' /></Link>
         <nav className="header__menu">
             <ul className="header__menu-list">
                 <Link to='/' className="header__menu-link">
