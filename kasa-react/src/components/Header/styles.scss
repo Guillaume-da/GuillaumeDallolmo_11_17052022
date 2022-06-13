@@ -6,6 +6,11 @@
     justify-content: space-between;
     padding: 20px 20px;
     @include breakpoint-large {
+        padding: 40px 20px;
+        margin: 0 auto;
+        width: 1240px;
+    }
+    @include breakpoint-very-large {
         padding: 40px 100px;
         margin: 0 auto;
         width: 1240px;

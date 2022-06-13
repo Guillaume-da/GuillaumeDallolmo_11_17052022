@@ -48,9 +48,13 @@ main {
 .animated {
     box-sizing: border-box;
     opacity: 1;
+    margin-bottom: 10px;
     transition:  
     height 0.3s ease-in,
     opacity 0.3s 0.3s ease-in-out;
+    @include breakpoint-large {
+        margin-bottom: 0;
+    }
 }
 
 .visible-flex {
