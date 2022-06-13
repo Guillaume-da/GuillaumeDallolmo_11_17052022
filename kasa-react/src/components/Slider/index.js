@@ -34,6 +34,7 @@ const Slider = (props) => {
                 <img src={arrowLeft} alt="" className="lodgingHero__slider-left-item" onClick={down} />
                 <img src={images[index]} alt="" className="lodgingHero__image" />
                 <img src={arrowRight} alt="" className="lodgingHero__slider-right-item" onClick={up} />
+                <span className="lodgingHero__slider-indicator">{index + 1}/{images.length}</span>
             </div>
         );
     }
