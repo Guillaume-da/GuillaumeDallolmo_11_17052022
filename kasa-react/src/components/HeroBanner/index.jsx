@@ -2,12 +2,13 @@ import './styles.scss';
 
 const HomeHero = (props) => {
   const idValue = props.idValue
+  const contentValue = props.contentValue
   
   if (idValue === "home") {
     return (
       <div className="homeHero">
           <div className="homeHero__banner">
-              <h1 className="homeHero__title">Chez vous, partout et ailleurs</h1>
+              <h1 className="homeHero__title">{contentValue}</h1>
           </div>
       </div>
     );

@@ -5,7 +5,7 @@ function Home() {
 
     return (
         <div>
-            <HeroBanner idValue="home"/>
+            <HeroBanner idValue="home" contentValue="Chez vous, partout et ailleurs"/>
             <AccommodationList />
         </div>
     );
