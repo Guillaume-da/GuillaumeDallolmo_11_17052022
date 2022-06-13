@@ -15,12 +15,15 @@
         color: #FFFFFF;
         font-size: 18px;
         font-weight: 500;
+        line-height: 25px;
         position: absolute;
         bottom: 15px;
         left: 20px;
         margin-right: 20px;
+        width: 70%;
         @include breakpoint-large {
             bottom: 20px;
+            width: 100%;
         }
     }
 }
