@@ -11,7 +11,7 @@ import AccordionItem from "../components/AccordionItem";
 import useFetch from '../useFetch'
 
 function AccomodationPage() {
-    const { loading, data: datas } = useFetch(`${process.env.REACT_APP_API}`)
+    const { loading, data: datas, error } = useFetch(`${process.env.REACT_APP_API}`)
     const slug = useLocation()
     const id = slug.pathname.replace('/accomodation/', '')
     const accomodation = datas?.find((item) => item.id === id);
@@ -44,7 +44,7 @@ function AccomodationPage() {
                 </div>
             </main>
         );
-    } else if(!loading && datas && accomodation === undefined){
+    } else if((!loading && datas && accomodation === undefined) || error){
         return <Error />
     }
     
