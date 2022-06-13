@@ -6,7 +6,7 @@ import './styles.scss';
 const Slider = (props) => {
     const images = props.images
     const [index, setIndex] = useState(0);
-    console.log(images.length)
+    
     const down = () => {
         if(index === 0){
             setIndex(images.length - 1)
