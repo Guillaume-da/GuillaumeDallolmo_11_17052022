@@ -6,7 +6,7 @@ function About() {
 
     return (
         <div>
-            <HeroBanner />
+            <HeroBanner idValue="about"/>
             <main className="accordion">
                 {data.map((item, index) => (
                     <div key={`${index}-${index}`} >

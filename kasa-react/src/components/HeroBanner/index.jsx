@@ -1,10 +1,9 @@
-import { useLocation } from 'react-router-dom';
 import './styles.scss';
 
-const HomeHero = () => {
-  const location = useLocation();
+const HomeHero = (props) => {
+  const idValue = props.idValue
   
-  if (location.pathname === '/') {
+  if (idValue === "home") {
     return (
       <div className="homeHero">
           <div className="homeHero__banner">
@@ -12,7 +11,7 @@ const HomeHero = () => {
           </div>
       </div>
     );
-  } else if (location.pathname === '/about') {
+  } else if (idValue === "about") {
       return (
         <div className="aboutHero">
           <div className="aboutHero__banner"></div>

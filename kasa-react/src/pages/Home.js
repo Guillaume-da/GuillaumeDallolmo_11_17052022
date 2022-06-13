@@ -5,7 +5,7 @@ function Home() {
 
     return (
         <div>
-            <HeroBanner />
+            <HeroBanner idValue="home"/>
             <AccommodationList />
         </div>
     );

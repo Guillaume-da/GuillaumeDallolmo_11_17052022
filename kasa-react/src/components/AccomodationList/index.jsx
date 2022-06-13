@@ -10,7 +10,7 @@ function AccommodationList() {
         <main>
             <div className="main">
                 {datas?.map((data) => (
-                    <AccommodationItem titleValue={data.title} id={data.id} key={`${data.id}`}  />
+                    <AccommodationItem titleValue={data.title} id={data.id} cover={data.cover} key={`${data.id}`}  />
                 ))}
             </div>
         </main>

@@ -6,7 +6,7 @@ import './styles.scss';
 const Slider = (props) => {
     const images = props.images
     const [index, setIndex] = useState(0);
-    
+    console.log(images.length)
     const down = () => {
         if(index === 0){
             setIndex(images.length - 1)
@@ -22,13 +22,22 @@ const Slider = (props) => {
         } 
     }
     
-    return (
-        <div className="lodgingHero__slider-container">
-            <img src={arrowLeft} alt="" className="lodgingHero__slider-left-item" onClick={down} />
-            <img src={images[index]} alt="" className="lodgingHero__image" />
-            <img src={arrowRight} alt="" className="lodgingHero__slider-right-item" onClick={up} />
-        </div>
-    );
+    if(images.length === 1) {
+        return (
+            <div className="lodgingHero__slider-container">
+                <img src={images[index]} alt="" className="lodgingHero__image" />
+            </div>
+        );
+    } else {
+        return (
+            <div className="lodgingHero__slider-container">
+                <img src={arrowLeft} alt="" className="lodgingHero__slider-left-item" onClick={down} />
+                <img src={images[index]} alt="" className="lodgingHero__image" />
+                <img src={arrowRight} alt="" className="lodgingHero__slider-right-item" onClick={up} />
+            </div>
+        );
+    }
+    
 }
 
 export default Slider;
